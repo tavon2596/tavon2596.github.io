@@ -8,108 +8,84 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header class="page-header">
-    <div class="container header-inner">
-      <a class="brand" href="#top">Tavon Gordon</a>
-      <nav class="nav-links">
-        <a href="#work">Work</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <div class="page-shell">
+    <nav class="side-nav" aria-label="Section navigation">
+      <a href="#top"><span></span></a>
+      <a href="#about"><span></span></a>
+      <a href="#projects"><span></span></a>
+      <a href="#contact"><span></span></a>
+    </nav>
 
-  <main>
-    <section id="top" class="hero-section">
-      <div class="container hero-content">
-        <p class="eyebrow">Web & UI Developer</p>
-        <h1>A clean portfolio for modern web experiences.</h1>
-        <p class="hero-description">I build simple, responsive websites with HTML, CSS, JavaScript, and Bootstrap. This portfolio highlights my work, skills, and an interactive contact form.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#projects">Projects</a>
-          <a class="button button-secondary" href="Tavon_Gordon_Resume_35202643304.pdf" target="_blank">Resume</a>
-        </div>
+    <header class="hero hero-dark" id="top">
+      <div class="hero-meta">
+        <div class="hero-number">00001</div>
+        <div class="hero-label">Web Developer</div>
       </div>
-    </section>
-
-    <section id="work" class="section section-tight">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-label">Selected Work</span>
-          <h2>Focused on clarity and usability</h2>
-        </div>
-        <div class="cards-grid">
-          <article class="info-card">
-            <h3>Experience</h3>
-            <p>Developed responsive layouts, interactive forms, and accessible UI using clean semantic HTML and CSS.</p>
-          </article>
-          <article class="info-card">
-            <h3>Skills</h3>
-            <p>JavaScript interactivity, Bootstrap components, page structure, Git version control, and GitHub Pages deployment.</p>
-          </article>
-          <article class="info-card">
-            <h3>Approach</h3>
-            <p>Keep the design minimal, readable, and easy to navigate while still delivering modern functionality.</p>
-          </article>
-        </div>
+      <div class="hero-inner">
+        <h1>TAVON-<br>ON<br>GORDON-<br>ON</h1>
+        <p class="hero-copy">I build minimal, polished websites using HTML, CSS, JavaScript, and Bootstrap. This site is designed to feel bold, simple, and clear.</p>
       </div>
-    </section>
-
-    <section id="projects" class="section section-dark">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-label">Projects</span>
-          <h2>Examples of my work</h2>
-        </div>
-        <ul class="project-list">
-          <li>
-            <strong>Portfolio Website</strong>
-            <p>A single-page portfolio built with Bootstrap and custom CSS to showcase clean layout and mobile-first design.</p>
-            <a href="https://github.com/tavon2596/portfolio-example" target="_blank">View repo</a>
-          </li>
-          <li>
-            <strong>Interactive Contact Form</strong>
-            <p>JavaScript validation and live feedback create a simple, polished user experience for form submission.</p>
-            <a href="https://github.com/tavon2596/contact-form-example" target="_blank">View repo</a>
-          </li>
-          <li>
-            <strong>Bootstrap Demo</strong>
-            <p>Used accordion and carousel components to present information in a clean, engaging format.</p>
-            <a href="https://github.com/tavon2596/bootstrap-demo" target="_blank">View repo</a>
-          </li>
-        </ul>
+      <div class="hero-footer">
+        <a href="Tavon_Gordon_Resume_35202643304.pdf" target="_blank">Download Resume</a>
       </div>
-    </section>
+    </header>
 
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-label">Contact</span>
-          <h2>Send a message</h2>
-          <p class="section-description">The contact form below is styled minimally and includes JavaScript validation to keep the interaction smooth.</p>
+    <main>
+      <section id="about" class="section section-dark">
+        <div class="section-content">
+          <div class="section-number">00002</div>
+          <h2>About</h2>
+          <p>I am a student developer focused on modern front-end design, responsive layouts, and producing polished user experiences. I enjoy translating ideas into clean websites that communicate clearly.</p>
+          <p>My work emphasizes readability, accessibility, and intuitive navigation on both desktop and mobile.</p>
         </div>
-        <form id="contactForm" class="contact-card">
-          <label for="name">Name</label>
-          <input type="text" id="name" placeholder="Your name" required />
+      </section>
 
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="name@example.com" required />
+      <section id="projects" class="section section-light">
+        <div class="section-content">
+          <div class="section-number">00003</div>
+          <h2>Projects</h2>
+          <div class="project-grid">
+            <article class="project-item">
+              <h3>Portfolio Website</h3>
+              <p>A single-page portfolio built with responsive HTML, custom CSS, and Bootstrap components.</p>
+              <a href="https://github.com/tavon2596/portfolio-example" target="_blank">View repo</a>
+            </article>
+            <article class="project-item">
+              <h3>Contact Form</h3>
+              <p>Interactive form validation and live feedback using JavaScript for a smoother submission experience.</p>
+              <a href="https://github.com/tavon2596/contact-form-example" target="_blank">View repo</a>
+            </article>
+            <article class="project-item">
+              <h3>Bootstrap Demo</h3>
+              <p>Cleanly styled components and layout examples using Bootstrap utilities and custom overrides.</p>
+              <a href="https://github.com/tavon2596/bootstrap-demo" target="_blank">View repo</a>
+            </article>
+          </div>
+        </div>
+      </section>
 
-          <label for="message">Message</label>
-          <textarea id="message" rows="5" placeholder="Write a quick message" required></textarea>
+      <section id="contact" class="section section-dark">
+        <div class="section-content contact-section">
+          <div class="section-number">00004</div>
+          <h2>Contact</h2>
+          <p>Reach out with a quick note using the form below. The form includes client-side validation for an improved experience.</p>
+          <form id="contactForm" class="contact-card">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your name" required />
 
-          <button type="submit" class="button button-primary">Send Message</button>
-          <div id="formStatus" class="form-status" aria-live="polite"></div>
-        </form>
-      </div>
-    </section>
-  </main>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="name@example.com" required />
 
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <p>Designed and built by Tavon Gordon.</p>
-    </div>
-  </footer>
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Write a quick message" required></textarea>
+
+            <button type="submit" class="button button-primary">Send Message</button>
+            <div id="formStatus" class="form-status" aria-live="polite"></div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-II9jVqCsMkM1p9Sy7R0tmvn5qO8IocTYTFpKyoqdbAQK7+eG12tK4gkYdSXd9MN2" crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
