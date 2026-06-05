@@ -27,21 +27,16 @@ document.addEventListener("DOMContentLoaded", function () {
     contactForm.reset();
   });
 
-  if (themeToggle) {
-    themeToggle.addEventListener("click", function () {
-      document.body.classList.toggle("dark-mode");
-      const isDark = document.body.classList.contains("dark-mode");
-      themeToggle.textContent = isDark ? "Switch to Light Mode" : "Toggle Dark Mode";
-    });
-  }
+  themeToggle.addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    themeToggle.textContent = isDark ? "Switch to Light Mode" : "Toggle Dark Mode";
+  });
 
-  const navLinks = document.querySelectorAll(".nav-links a");
-  const mobileNav = document.querySelector(".navbar-collapse");
+  const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
   navLinks.forEach((link) => {
     link.addEventListener("click", function () {
-      if (mobileNav) {
-        mobileNav.classList.remove("show");
-      }
+      document.querySelector(".navbar-collapse").classList.remove("show");
     });
   });
 });
