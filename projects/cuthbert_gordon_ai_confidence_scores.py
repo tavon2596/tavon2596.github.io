@@ -37,16 +37,16 @@ Does the AI actually know when it is wrong? When an LLM gives an incorrect answe
 Run once per Colab session. `bitsandbytes` enables 4-bit quantization so open-weight models fit on a free T4 GPU.
 """
 
-!pip install -q transformers accelerate bitsandbytes datasets pandas matplotlib openai
+#pip install -q transformers accelerate bitsandbytes datasets pandas matplotlib openai
 
 import os, re, json, time, random
-import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
+import pandas as pd # type: ignore
+import matplotlib.pyplot as plt # type: ignore
+import numpy as np # type: ignore
 
-from datasets import load_dataset
-from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
-import torch
+from datasets import load_dataset # type: ignore
+from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig # type: ignore
+import torch # type: ignore
 
 print('All imports successful.')
 print(f'CUDA available: {torch.cuda.is_available()}')
@@ -92,7 +92,7 @@ RESULTS_CSV      = f'results_stage{MODEL_STAGE}.csv'
 
 # ── TOKENS / API KEYS ─────────────────────────────────────────────────────────
 try:
-    from google.colab import userdata
+    from google.colab import userdata # type: ignore
     HF_TOKEN   = userdata.get('HF_TOKEN')
     OPENAI_KEY = userdata.get('OPENAI_API_KEY')
 except:
@@ -191,7 +191,7 @@ if MODEL_STAGE in [1, 2]:
     print('Model loaded and ready.')
 
 elif MODEL_STAGE == 3:
-    import openai
+    import openai # type: ignore
     if not OPENAI_KEY:
         raise ValueError('OPENAI_API_KEY is not set. Add it to Colab Secrets as OPENAI_API_KEY.')
     openai.api_key = OPENAI_KEY
@@ -344,7 +344,7 @@ def run_inference_batch_hf(prompts, max_new_tokens=200):
 
 def run_inference_api(prompt, max_tokens=250):
     """OpenAI API inference (Stage 3 — proprietary model)."""
-    import openai
+    import openai # type: ignore
     response = openai.chat.completions.create(
         model=MODEL_ID,
         messages=[{'role': 'user', 'content': prompt}],
@@ -557,7 +557,7 @@ if PRESENTATION_MODE:
         df_results = pd.read_csv(RESULTS_CSV)
         print(f'PRESENTATION MODE: Loaded {len(df_results)} pre-saved rows from {RESULTS_CSV}.')
         print('Skipping inference. Proceed to Section 9.')
-        display(df_results.head(4))
+        display(df_results.head(4)) # type: ignore
     else:
         print(f'ERROR: {RESULTS_CSV} not found.')
         print('Run this section with PRESENTATION_MODE = False first to generate results.')
@@ -637,7 +637,7 @@ else:
     print(f'Total time : {total_time/60:.1f} minutes')
     print(f'Saved to   : {RESULTS_CSV}')
     print(f'\nDone! Set PRESENTATION_MODE = True in Section 2 before your presentation.')
-    display(df_results.head(4))
+    display(df_results.head(4)) # type: ignore
 
 """---
 ## Section 9 — Grade All Answers
