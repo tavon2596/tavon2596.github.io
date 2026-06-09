@@ -1,24 +1,30 @@
 # Project Journal
 
 ## Session 1
-- Created the website structure with `index.html` and a responsive Bootstrap layout.
-- Added the main sections: About, Previous Work, Projects, and Contact.
-- Used a navigation bar with internal anchors for one-page navigation.
-- Implemented an accordion to show skills and course content.
-- Learned how to integrate Bootstrap carousel for additional advanced UI.
+- Built the website structure with `index.html` using a responsive one-page Bootstrap layout.
+- Added main sections: About, Projects, and Contact.
+- Implemented anchor navigation for smooth section transitions.
+- Added project cards and a portfolio summary to showcase experience.
 
 ## Session 2
-- Added custom styling in `css/styles.css` for consistent branding across the website.
-- Built a JavaScript file, `js/script.js`, to handle contact form validation and dark mode toggling.
-- Ensured the form provides feedback messages for success and field validation.
-- Tested responsive layout on smaller screens and adjusted spacing.
+- Applied custom styling in `css/styles.css` to maintain consistent typography and spacing.
+- Built `js/script.js` for contact form validation and submission handling.
+- Added field validation, success/error feedback, and reset behavior after submission.
+- Confirmed responsive behavior on mobile and desktop screen sizes.
 
 ## Session 3
-- Created README documentation with run instructions and article sources.
-- Linked the resume file and confirmed the portfolio project meets course requirements.
-- Added notes about GitHub Pages deployment and external resources used.
+- Updated `README.md` with accurate repository content, local viewing instructions, and GitHub Pages deployment steps.
+- Added notes about EmailJS placeholders and frontend security considerations.
+- Documented the site technologies and feature set for easier project handoff.
+
+## Session 4
+- Added EmailJS-ready form input names to `index.html` for template mapping.
+- Replaced placeholder JavaScript with EmailJS initialization and `emailjs.sendForm(...)` logic.
+- Ensured the form still validates before attempting submission.
+- Noted that public key values are visible in frontend code and should be restricted by Allowed Origins.
 
 ## Outside Sources Used
 - Bootstrap 5 documentation: https://getbootstrap.com/docs/5.3/getting-started/introduction/
 - HTML form validation patterns from MDN Web Docs.
+- EmailJS browser SDK documentation.
 - GitHub Pages deployment instructions from GitHub Docs.
