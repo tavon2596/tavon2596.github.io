@@ -77,13 +77,13 @@
           <p>Reach out with a quick note using the form below. The form includes client-side validation for an improved experience.</p>
           <form id="contactForm" class="contact-card">
             <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Your name" required />
+            <input type="text" id="name" name="name" placeholder="Your name" required />
 
             <label for="email">Email</label>
-            <input type="email" id="email" placeholder="name@example.com" required />
+            <input type="email" id="email" name="email" placeholder="name@example.com" required />
 
             <label for="message">Message</label>
-            <textarea id="message" rows="5" placeholder="Write a quick message" required></textarea>
+            <textarea id="message" name="message" rows="5" placeholder="Write a quick message" required></textarea>
 
             <button type="submit" class="button button-primary">Send Message</button>
             <div id="formStatus" class="form-status" aria-live="polite"></div>
@@ -94,6 +94,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-II9jVqCsMkM1p9Sy7R0tmvn5qO8IocTYTFpKyoqdbAQK7+eG12tK4gkYdSXd9MN2" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
